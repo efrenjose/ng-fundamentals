@@ -6,11 +6,11 @@ import { EventsComponent } from './events-app.component';
 
 
 @NgModule({
-  declarations: [
-    EventsComponent
-  ],
   imports: [
     BrowserModule
+  ],
+  declarations: [
+    EventsComponent
   ],
   providers: [],
   bootstrap: [EventsComponent]
