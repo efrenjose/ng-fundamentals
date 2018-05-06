@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 //Providers
 import { EventService } from './events/shared/events.service';
@@ -9,18 +10,22 @@ import { ToastrService } from './common/toastr.service';
 import { EventsComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventsThumbnailComponent } from './events/events-thumbnail.component';
-import { EventsDetailComponent } from './events/event-details/events-detail.component';
+import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { NavBarComponent } from './nav/navbar.component';
+
+//Routes
+import { appRoutes } from '../routes';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [
     EventsComponent,
     EventsListComponent,
     EventsThumbnailComponent,
-    EventsDetailComponent,
+    EventDetailsComponent,
     NavBarComponent
   ],
   providers: [EventService, ToastrService],
